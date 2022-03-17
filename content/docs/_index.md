@@ -1,9 +1,9 @@
 ---
-title: The Longhorn Documentation
+title: The Talos Linux Documentation
 ---
 
-Welcome to the documentation for Longhorn, a cloud native distributed block storage system for [Kubernetes](https://kubernetes.io).
+Welcome to the documentation for Talos Linux. Talos Linux is Linux designed for [Kubernetes](https://kubernetes.io) – secure, immutable, and minimal.
 
-The Longhorn docs are separated into versions. The following versions are available:
+The Talos Linux docs are separated into versions:
 
 {{< version-list >}}

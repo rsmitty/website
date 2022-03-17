@@ -1,37 +1,47 @@
-{{ $why      := site.Params.why }}
-{{ $features := site.Params.features }}
+{{ $why := site.Params.why }}
+{{ $what := site.Params.what }}
 
 
 <section class="section">
   <div class="container">
-    <div class="columns is-variable is-8">
-      <div class="column">
-        <p class="title is-size-2 is-size-3-mobile">
-          Features
-        </p>
-
-        {{ range $features }}
-
-        <p class="title is-size-4 is-size-5-mobile">
-          {{ .title }}
+    <div class="columns is-centered is-variable is-8">
+      <div class="column is-half">
+        <p class="title has-text-centered is-size-2 is-size-3-mobile">
+          What is Talos Linux?
         </p>
 
         <div class="content">
-          {{ .text | markdownify }}
+          Talos Linux is Linux designed for Kubernetes – secure, immutable, and minimal.
         </div>
 
-
+        {{ range $what }}
+        <div class="content">
+          {{ .text | markdownify }}
+        </div>
         {{ end }}
       </div>
+    </div>
 
-      <div class="column">
-        <p class="title is-size-2 is-size-3-mobile">
-          How Longhorn works
+    <br />
+
+    <div class="columns is-centered is-variable is-8">
+      <div class="column is-three-quarters">
+        <p class="title has-text-centered is-size-2 is-size-3-mobile">
+          Why Talos Linux?
         </p>
 
-        <figure class="image">
-          <img src="/img/diagrams/architecture/how-longhorn-works.svg">
-        </figure>
+        <div class="columns is-centered is-variable is-8">
+          {{ range $why }}
+          <div class="column">
+            <p class="title has-text-centered is-size-4 is-size-5-mobile">
+              {{ .title }}
+            </p>
+            <div class="content">
+              {{ .text | markdownify }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
