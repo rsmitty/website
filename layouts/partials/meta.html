@@ -1,12 +1,12 @@
-{{ $url     := .Permalink }}
-{{ $title   := cond .IsHome site.Title (printf "%s | %s" site.Title .Title) }}
-{{ $author  := site.Author }}
-{{ $type    := cond .IsHome "website" "article" }}
-{{ $desc    := cond .IsHome site.Params.description .Description }}
+{{ $url := .Permalink }}
+{{ $title := cond .IsHome site.Title (printf "%s | %s" site.Title .Title) }}
+{{ $author := site.Author }}
+{{ $type := cond .IsHome "website" "article" }}
+{{ $desc := cond .IsHome site.Params.description .Description }}
 {{ $twitter := site.Params.twitter_handle }}
-{{ $img     := "img/logos/longhorn-icon-color.png" | absURL }}
-{{ $imgAlt  := printf "%s color logo" site.Title }}
-{{ $locale  := site.Params.locale }}
+{{ $img := "img/logos/Sidero_mark_onecolor_RGB.png" | absURL }}
+{{ $imgAlt := printf "%s color logo" site.Title }}
+{{ $locale := site.Params.locale }}
 {{ $versions := site.Params.versions }}
 {{ $latestVersion := index $versions 0 }}
 {{ $currentVersion := index (split .Page.File.Dir "/" ) 1 }}
@@ -22,7 +22,8 @@
 {{ end }}
 
 {{ with .OutputFormats.Get "rss" }}
-{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type $url site.Title | safeHTML }}
+{{ printf `
+<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type $url site.Title | safeHTML }}
 {{ end -}}
 
 {{ if $currentVersion }}

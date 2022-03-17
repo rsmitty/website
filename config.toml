@@ -16,8 +16,7 @@ alpine_js_version = "2.2.5"
 description = "The Kubernetes Operating System"
 locale = "en_US"
 tagline = "In having less, Talos offers more. Security. Efficiency. Resiliency. Consistency."
-versions = ["v1.0", "v0.14", "v0.13", "v0.12"]
-#"v0.11", "v0.10", "v0.9", "v0.8", "v0.7", "v0.6"]
+versions = ["v1.0", "v0.14", "v0.13", "v0.12", "v0.11", "v0.10", "v0.9", "v0.8", "v0.7", "v0.6"]
 
 [params.logos]
 footer = "Sidero_horizontal_lightbkgd_RGB.png"
